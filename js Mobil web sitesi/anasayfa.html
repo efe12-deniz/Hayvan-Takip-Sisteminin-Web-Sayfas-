@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayvan Takip Sistemi</title>
+    <link rel="stylesheet" href="anasayfa.css">
+    <!-- Font Awesome CDN linki -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header ve Navigasyon -->
+<header>
+    <div class="logo">
+        <a href="anasayfa.html" style="text-decoration: none; color: inherit;">
+            <h1>HTK</h1>
+          </a>
+          
+    </div>
+    <nav>
+        <ul>
+            <li><a href="anasayfa.html">Ana Sayfa</a></li>
+            <li><a href="ozellikler.html">Özellikler</a></li>
+            <li><a href="yorumlar.html">Kullanıcı Yorumları</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+    <!-- Sosyal Medya İkonları -->
+    <div class="social-icons">
+        <a href="https://https://www.instagram.com/efedeniz_" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/efe12-deniz" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
+
+<!-- Slider Bölümü -->
+<section class="slider">
+    <div class="slider-container">
+        <img id="slider-image" src="HTSslider.png" alt="Slider Resim 1" width="100%" height="100%">
+    </div>
+</section>
+
+<!-- Card'lar Bölümü -->
+<section class="cards-section">
+    <div class="card">
+        <img src="İmages/anasayfaHayvan.png" alt="Hayvan Yönetimi" class="card-img">
+        <h3 class="card-title">Hayvan Yönetimi</h3>
+    </div>
+    <div class="card">
+        <img src="İmages/anasayfaKotra-portrait.png" alt="Kotra Yönetimi" class="card-img">
+        <h3 class="card-title">Kotra Yönetimi</h3>
+    </div>
+    <div class="card">
+        <img src="İmages/anasayfaListe-portrait.png" alt="Listeleme" class="card-img">
+        <h3 class="card-title">Listeleme</h3>
+    </div>
+    <div class="card">
+        <img src="İmages/anasayfaKarZarar-portrait.png" alt="Kar/Zarar" class="card-img">
+        <h3 class="card-title">Kar/Zarar</h3>
+    </div>
+    <div class="card">
+        <img src="İmages/anasayfaNot-portrait.png" alt="Not Tutma" class="card-img">
+        <h3 class="card-title">Not Tutma</h3>
+    </div>
+</section>
+
+<section class="comment-section">
+    <h2>Yorumlarınız</h2>
+    <div id="yorumlar-container">
+        <!-- Yorumlar burada listelenecek -->
+    </div>
+</section>
+
+<script src="anasayfa.js">
+    
+  // Eğer kullanıcı giriş yapmadıysa login sayfasına yönlendir
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Yorumları</title>
+    <link rel="stylesheet" href="yorumlar.css">
+    <!-- Font Awesome CDN linki -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header ve Navigasyon -->
+<header>
+    <div class="logo">
+        <a href="anasayfa.html" style="text-decoration: none; color: inherit;">
+            <h1>HTK</h1>
+          </a>
+          
+    </div>
+    <nav>
+        <ul>
+            <li><a href="anasayfa.html">Ana Sayfa</a></li>
+            <li><a href="ozellikler.html">Özellikler</a></li>
+            <li><a href="yorumlar.html">Kullanıcı Yorumları</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+    <!-- Sosyal Medya İkonları -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
+
+<!-- Yorum Ekleme Formu -->
+<section class="comment-section">
+    <h2>Yorumlarınız Bizim İçin Değerli</h2>
+
+    <form id="commentForm">
+        <input type="text" id="isim" placeholder="Adınız" required><br>
+        <input type="text" id="soyisim" placeholder="Soyadınız" required><br>
+        <textarea id="yorum" placeholder="Yorumunuzu yazın" rows="5" required></textarea><br>
+        <button type="submit">Yorum Gönder</button>
+    </form>
+
+    <h3>Yorumlar</h3>
+    <div id="yorumlar-container">
+        <!-- Yorumlar burada listelenecek -->
+    </div>
+</section>
+
+<script src="yorumlar.js"></script>
+</body>
+</html>

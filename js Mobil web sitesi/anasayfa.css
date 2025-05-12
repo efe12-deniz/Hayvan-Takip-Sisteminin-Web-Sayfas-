@@ -1,0 +1,221 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d4d4d4;
+    padding-top: 100px;  /* Header sabit olduğu için içerik header'ın altına kayacak */
+}
+
+/* Header */
+header {
+    background-color: #111111;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    position: absolute;
+    left: 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;  /* Menüyü ortalıyoruz */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+}
+
+/* Sosyal Medya İkonları */
+.social-icons {
+    display: flex;
+    gap: 20px;  /* İkonlar arasındaki boşluğu ayarlıyoruz */
+    margin-left: auto;  /* Sağ tarafa yerleştiriyoruz */
+    margin-right: 20px;  /* Sağdan biraz boşluk bırakıyoruz */
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8em;  /* İkonların boyutunu ayarlıyoruz */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ddd;  /* Hover efekti */
+}
+
+.slider {
+    width: 90%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Arka plan boşlukta siyah görünsün diye */
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+#slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Kırpma olmadan tüm fotoğraf görünür */
+}
+
+
+
+/* Card'lar Bölümü */
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.card {
+    width: 30%;
+    background-color: #f4f4f4;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 15px 0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    max-height: 450px; /* Örneğin: en fazla 300px yüksekliğinde göster */
+    object-fit: contain; /* Görüntünün tamamı görünür ama orantı bozulmaz */
+}
+
+
+.card-title {
+    font-size: 1.6em;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* Yorum Sayfasındaki Yorum Kutuları */
+.yorum-preview {
+    background: linear-gradient(to right, #f4f4f4, #e4e4e4);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 15px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ddd;
+    background-color: #ffffff;
+}
+
+.yorum-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Yorum Yazılarının Aynı Boyutta Olması İçin */
+.yorum-author {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.comment-section h2 {
+    text-align: center;  /* Başlığı yatayda ortalar */
+    font-size: 2.5em;  /* Başlık font boyutunu ayarlayabilirsiniz */
+    color: #2e302e;  /* Başlık rengi */
+    margin-bottom: 20px;  /* Başlık ile yorumlar arasındaki mesafeyi ayarlar */
+}
+
+.yorum-text {
+    font-size: 1.1em;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+    }
+
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}

@@ -1,0 +1,213 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d4d4d4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #111111;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    position: absolute;
+    left: 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+}
+
+/* Sosyal Medya İkonları */
+.social-icons {
+    display: flex;
+    gap: 20px;  /* İkonlar arasındaki boşluğu ayarlıyoruz */
+    margin-left: auto;  /* Sağ tarafa yerleştiriyoruz */
+    margin-right: 20px;  /* Sağdan biraz boşluk bırakıyoruz */
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8em;  /* İkonların boyutunu ayarlıyoruz */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ddd;  /* Hover efekti */
+}
+
+/* Yorumlar Sayfası İçeriği */
+.comment-section {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.comment-section h2 {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.comment-section h3 {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.comment-section button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #3b3b3b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #45a049;
+}
+
+/* Yorumlar */
+#yorumlar-container {
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.yorum {
+    background: linear-gradient(to right, #f4f4f4, #e4e4e4);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 15px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ddd;
+    background-color: #ffffff;
+}
+
+.yorum:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.yorum-author {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: left; /* EKLENDİ */
+}
+
+.yorum-text {
+    font-size: 1.1em;
+    color: #000000;
+    line-height: 1.6;
+    text-align: left; /* EKLENDİ */
+}
+
+
+/* Sayfa İçeriği */
+body {
+    padding-top: 100px;  /* Header sabit olduğu için içerik header'ın altına kayacak */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+    }
+
+    .comment-section form {
+        width: 90%;
+    }
+
+    .yorum {
+        width: 90%;
+    }
+}
